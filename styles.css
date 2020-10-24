@@ -1,8 +1,104 @@
+
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  margin-bottom: 5%;
+  background: transparent;
+  color: #ffffff;
+}
+
+h2 {
+  margin-bottom: 1%;
+  background: transparent;
+  color: #ffffff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 7px;
+  font-style: italic;
+}
+
+button {
+  display: table-cell;
+  height: 30%;
+  width: 40%;
+  background: #134d71;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: auto;
+  font-size: 16px;
+}
+
+.message-selection {
+  display: table;
+  justify-content: center;
+  height: 10%;
+  width: 30%;
+  margin: 0%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  margin: 5%;
+  height: 20%;
+  width: 50%;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.radio-buttons {
+  /*Need text closer to radio button */
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+.affirmation
+.mantra {
+  display: flex;
+  justify-content: center;
+}
+
+.meditation-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
 light-blue - #78a7c6;
 dark-blue - #134d71;
 white - #ffffff;
-black - #000000;
-*/
+black - #000000; */
