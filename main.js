@@ -33,6 +33,8 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
+var affirmationsUsed = [];
+var mantrasUsed = [];
 
 receiveMessageButton.addEventListener('click', displayMessage);
 
@@ -40,20 +42,49 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
+//selecting two elements from the array, need to select only one
 function displayMessage() {
   var div = document.querySelector(".radio-buttons")
   var radios = div.querySelectorAll("input");
+  // messageDisplayBox.innerHTML = null;
   var selection;
   for (var i = 0; i < radios.length; i++) {
     if (radios[0].checked) {
       selection = affirmations[getRandomIndex(affirmations)];
       messageDisplayBox.innerHTML = selection;
+      // affirmationsUsed.push(selection);
+      // affirmations.splice(selection, 1)
+      console.log(selection);
+      // console.log(affirmationsUsed);
+      // console.log(affirmationsUsed.length);
     } else if (radios[1].checked) {
       selection = mantras[getRandomIndex(mantras)];
       messageDisplayBox.innerHTML = selection;
+      // mantrasUsed.push(selection);
+      // mantras.splice(i, 1);
     }
   }
 }
 
+// function displayMessage() {
+//   var div = document.querySelector(".radio-buttons")
+//   var radios = div.querySelectorAll("input");
+//   var selection;
+//   for (var i = 0; i < radios.length; i++) {
+//     if (radios[0].checked) {
+//       selection = affirmations[getRandomIndex(affirmations)];
+//       messageDisplayBox.innerHTML = selection;
+//     } else if (radios[1].checked) {
+//       selection = mantras[getRandomIndex(mantras)];
+//       messageDisplayBox.innerHTML = selection;
+//     }
+//   }
+// }
+
 /*
+Use JavaScript to ensure that the user never sees a
+repeated message until they’ve seen them all.
+
+After they’ve seen them all they should be notified
+that they will now start seeing repeat messages.
 */
