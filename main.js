@@ -1,8 +1,5 @@
-var affirmationRadio = document.querySelector(".affirmation");
-var mantraRadio = document.querySelector(".mantra");
 var receiveMessageButton = document.querySelector(".receive-message");
 var messageDisplayBox = document.querySelector(".display");
-var meditationImage = document.querySelector(".meditation-image");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -36,44 +33,27 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
-// var currentAffirmation;
-// var currentMantra;
 
-affirmationRadio.addEventListener('click', displayMessage);
-mantraRadio.addEventListener('click', displayMessage);
 receiveMessageButton.addEventListener('click', displayMessage);
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// function generateMessage() {
-//   // currentAffirmation = affirmations[getRandomIndex(affirmations)];
-//   // currentMantra = mantras[getRandomIndex(mantras)];
-//   // console.log(currentAffirmation);
-//   // console.log(currentMantra);
-// }
-
 function displayMessage() {
-/*
-currently only affirmation is populating
-need mantra to enter when selected via radio
-
-attempted to create both local and global variables for the current message
-still populating only the affirmation array
-*/
-  if (affirmationRadio) {
-    var currentAffirmation = affirmations[getRandomIndex(affirmations)];
-    messageDisplayBox.innerHTML = currentAffirmation;
-    console.log(currentAffirmation);
-  } else if (mantraRadio) {
-    var currentMantra = mantras[getRandomIndex(mantras)];
-    messageDisplayBox.innerHTML = currentMantra;
-    console.log(currentMantra);
+  var div = document.querySelector(".radio-buttons")
+  var radios = div.querySelectorAll("input");
+  var selection;
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[0].checked) {
+      selection = affirmations[getRandomIndex(affirmations)];
+      messageDisplayBox.innerHTML = selection;
+    } else if (radios[1].checked) {
+      selection = mantras[getRandomIndex(mantras)];
+      messageDisplayBox.innerHTML = selection;
+    }
   }
 }
 
 /*
-
 */

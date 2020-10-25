@@ -60,10 +60,15 @@ button {
   width: 50%;
   font-style: normal;
   font-size: 24px;
+/* text wrapping for the display box and longer messages*/
 }
 
 .radio-buttons {
-  /*Need text closer to radio button */
+  /*Need text closer to radio button
+  try using the margins
+  input[type="radio"]
+  didn't apply the justify content*/
+
   display: flex;
   justify-content: space-around;
   font-style: italic;
@@ -83,7 +88,8 @@ button {
   width: 80%;
 }
 
-
+/* correct text placement to center on the
+display class*/
 
 
 

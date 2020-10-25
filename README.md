@@ -6,7 +6,7 @@ Mantras are repetive phrases that are repeated again and again during mindfulnes
 
 This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html).
 
 ## Learning Goals
 
@@ -27,10 +27,10 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 - Read this README thoroughly, then begin working!
 
 ## Workflow
-Make sure you're utilizing git best practices (branches) and commiting frequently. 
+Make sure you're utilizing git best practices (branches) and commiting frequently.
 
 ### Day One Deliverable
-- Read the spec sheet closely. 
+- Read the spec sheet closely.
 - Send the link to your forked repo to your Project Manager
 
 Reflect on the the following questions in a DM to your Project Manager:
@@ -61,7 +61,7 @@ Reflect on the the following questions in a DM to your Project Manager:
 
 ### Choose your own Adventure
 
-In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing. 
+In the interest of giving you opportunities to individualize the skills you build, this project's main goal is to provide various different paths you can take. Along these different paths you will encounter different problems and solve them in different ways. As you make choices about which features to add, you should consider which features align with your strengths, which features would challenge you to grow, and which features you'd find to be useful in this application. Choose one or more of the following features to add. Some of them build on others, so be sure to read them all before choosing.
 
 _NOTE: You should absolutely not be working on this unless your UI is solid and you are 100% sure that your MVP is fully functional and bug free._
 
@@ -97,7 +97,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 _NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature_
 
 #### User can delete a message
-- Add the ability to delete a messge (ie: when a message shows up, show a button that says "I don't like this messge" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed. 
+- Add the ability to delete a messge (ie: when a message shows up, show a button that says "I don't like this messge" (or something similar), and remove it from the list so that it will not show up any more. Make sure to alert the user in some way that the message has been removed.
 
 _NOTE: None of this needs to persist on page refresh, unless you also complete the local storage feature_
 
@@ -114,7 +114,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 - Add a loading animation when a user clicks the "Receive Message" button to simulate searching for a message. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this.
 - Make your buttons grow in size or change color when the user hovers over them, enticing them to click the dang thing.
 - When the message appears, the text should fade in, from white to black to deliver the message in a calming way.
-- Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message Remember your user experience and animate this in gradually! 
+- Have the background change depending on if a user has selected an affirmation or mantra. Choose a calming secondary gradient for each type of message Remember your user experience and animate this in gradually!
 
 #### Login Page
 - Refactor your application so that the user lands on a "Login" page
@@ -127,7 +127,7 @@ _NOTE: None of this needs to persist on page refresh, unless you also complete t
 - Do some research and determine how to make your app respond to the user's screen size.
 - Layout and spacing should adapt to mobile, tablet, desktop and extra large screens.
 
-#### Local Storage 
+#### Local Storage
 - Only do this if you've added the "Favorite a Message" functionality.
 - Do some research to utilize Local Storage, so that the user's favorite messages will persist, even if they reload the page.
 
@@ -154,7 +154,7 @@ My possibilities are endless.
 
 I am worthy of my dreams.
 
-I am enough. 
+I am enough.
 
 I deserve to be healthy and feel good.
 
@@ -173,7 +173,7 @@ Don’t let yesterday take up too much of today.
 
 Every day is a second chance.
 
-Tell the truth and love everyone. 
+Tell the truth and love everyone.
 
 I am free from sadness.
 

@@ -8,14 +8,16 @@
     <h1>✨ Self Care Center ✨</h1>
     <h2>Which type of message?</h2>
     <section class="message-selection">
-      <ul>
-        <div class="radio-buttons">
-          <input type="radio" name="choice" class="affirmation">
-          <label for="radio">affirmation</label>
-          <input type="radio" name="choice" class="mantra">
-          <label for="radio">mantra</label>
-        </div>
-      </ul>
+      <form>
+        <ul>
+          <div class="radio-buttons">
+            <input type="radio" name="choice" class="affirmation radio" value="affirmation">
+            <label for="radio">affirmation</label>
+            <input type="radio" name="choice" class="mantra radio" value="mantra">
+            <label for="radio">mantra</label>
+          </div>
+        </ul>
+      </form>
         <button class="receive-message">Receive Message</button>
     </section>
     <section class="display">
@@ -24,3 +26,5 @@
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
+
+<!-- // button type submit?//  -->
