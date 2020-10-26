@@ -31,8 +31,23 @@ section {
   font-style: italic;
 }
 
+input[type="radios"] {
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+  margin: 5%;
+  align-items: center;
+
+}
+.radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 4%;
+}
+
 button {
-  display: table-cell;
+  display: flex;
+  justify-content: center;
   height: 30%;
   width: 40%;
   background: #134d71;
@@ -44,6 +59,7 @@ button {
 
 .message-selection {
   display: table;
+  flex-direction: column;
   justify-content: center;
   height: 10%;
   width: 30%;
@@ -60,24 +76,7 @@ button {
   width: 50%;
   font-style: normal;
   font-size: 24px;
-/* text wrapping for the display box and longer messages*/
-}
-
-.radio-buttons {
-  /*Need text closer to radio button
-  try using the margins
-  input[type="radio"]
-  didn't apply the justify content*/
-
-  display: flex;
-  justify-content: space-around;
-  font-style: italic;
-}
-
-.affirmation
-.mantra {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .meditation-image {
@@ -88,8 +87,6 @@ button {
   width: 80%;
 }
 
-/* correct text placement to center on the
-display class*/
 
 
 

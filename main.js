@@ -33,27 +33,51 @@ var mantras = [
   "Onward and upward.",
   "I am the sky, the rest is weather.",
 ];
+var affirmationsUsed = [];
+var mantrasUsed = [];
 
 receiveMessageButton.addEventListener('click', displayMessage);
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function shuffle(array) {
+  for (var i = 0; i < array.length; i++) {
+    var randomIndex = Math.floor(Math.random() * (i + 1));
+    var newIndex = array[randomIndex];
+    array[randomIndex] = array[i];
+    array[i] = newIndex;
+  }
+  return array;
 }
 
 function displayMessage() {
+  event.preventDefault();
   var div = document.querySelector(".radio-buttons")
   var radios = div.querySelectorAll("input");
   var selection;
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[0].checked) {
-      selection = affirmations[getRandomIndex(affirmations)];
-      messageDisplayBox.innerHTML = selection;
-    } else if (radios[1].checked) {
-      selection = mantras[getRandomIndex(mantras)];
-      messageDisplayBox.innerHTML = selection;
-    }
+  if (radios[0].checked) {
+    shuffle(affirmations);
+    for (var i = 0; i < affirmations.length; i++)
+      selection = affirmations[i];
+    messageDisplayBox.innerHTML = selection;
+    affirmationsUsed.push(selection);
+    var index = affirmations.indexOf(selection);
+    affirmations.splice(index, 1);
+    return selection;
+  } else if (radios[1].checked) {
+    shuffle(mantras);
+    for (var i = 0; i < mantras.length; i++)
+      selection = mantras[i];
+    messageDisplayBox.innerHTML = selection;
+    mantrasUsed.push(selection);
+    var index = mantras.indexOf(selection);
+    mantras.splice(index, 1);
+    return selection;
   }
 }
 
 /*
+Use JavaScript to ensure that the user never sees a
+repeated message until they’ve seen them all.
+
+After they’ve seen them all they should be notified
+that they will now start seeing repeat messages.
 */

@@ -9,16 +9,18 @@
     <h2>Which type of message?</h2>
     <section class="message-selection">
       <form>
-        <ul>
           <div class="radio-buttons">
-            <input type="radio" name="choice" class="affirmation radio" value="affirmation">
-            <label for="radio">affirmation</label>
-            <input type="radio" name="choice" class="mantra radio" value="mantra">
-            <label for="radio">mantra</label>
+            <div class="affirmation">
+              <input type="radio" name="choice" class="affirmation radio" value="affirmation">
+              <label for="radio">affirmation</label>
+            </div>
+            <div class="mantra">
+              <input type="radio" name="choice" class="mantra" value="mantra">
+              <label for="radio">mantra</label>
+            </div>
           </div>
-        </ul>
+          <button class="receive-message">Receive Message</button>
       </form>
-        <button class="receive-message">Receive Message</button>
     </section>
     <section class="display">
       <img src="./assets/meditate.svg" class="meditation-image">
@@ -26,5 +28,3 @@
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
-
-<!-- // button type submit?//  -->
