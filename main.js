@@ -50,30 +50,36 @@ function shuffle(array) {
 
 function displayMessage() {
   event.preventDefault();
-  var div = document.querySelector(".radio-buttons")
+  var div = document.querySelector(".radio-buttons");
   var radios = div.querySelectorAll("input");
   var selection;
   if (radios[0].checked) {
-    shuffle(affirmations);
-    for (var i = 0; i < affirmations.length; i++)
-      selection = affirmations[i];
-    messageDisplayBox.innerHTML = selection;
-    affirmationsUsed.push(selection);
-    var index = affirmations.indexOf(selection);
-    affirmations.splice(index, 1);
-    return selection;
+    generateMessage(affirmations, affirmationsUsed);
   } else if (radios[1].checked) {
-    shuffle(mantras);
-    for (var i = 0; i < mantras.length; i++)
-      selection = mantras[i];
-    messageDisplayBox.innerHTML = selection;
-    mantrasUsed.push(selection);
-    var index = mantras.indexOf(selection);
-    mantras.splice(index, 1);
-    return selection;
-  }
-}
+    generateMessage(mantras, mantrasUsed);
+  };
+};
 
+function generateMessage(array, arrayUsed) {
+  shuffle(array);
+  for (var i = 0; i < array.length; i++) {
+    selection = array[i];
+  };
+  messageDisplayBox.innerHTML = selection;
+  arrayUsed.push(selection);
+  var index = array.indexOf(selection);
+  array.splice(index, 1);
+  checkForEmptyArray(array, arrayUsed);
+};
+
+function checkForEmptyArray(array, arrayUsed) {
+  if (!array.length) {
+    alert(`You have reached the end of the inspirational messages, your messages will now repeat. Namaste!`);
+    for (var i of arrayUsed) {
+      array.push(i);
+    };
+  };
+};
 /*
 Use JavaScript to ensure that the user never sees a
 repeated message until they’ve seen them all.
