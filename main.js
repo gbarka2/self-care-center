@@ -38,48 +38,41 @@ var mantrasUsed = [];
 
 receiveMessageButton.addEventListener('click', displayMessage);
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function shuffle(array) {
+  for (var i = 0; i < array.length; i++) {
+    var randomIndex = Math.floor(Math.random() * (i + 1));
+    var newIndex = array[randomIndex];
+    array[randomIndex] = array[i];
+    array[i] = newIndex;
+  }
+  return array;
 }
 
-//selecting two elements from the array, need to select only one
 function displayMessage() {
+  event.preventDefault();
   var div = document.querySelector(".radio-buttons")
   var radios = div.querySelectorAll("input");
-  // messageDisplayBox.innerHTML = null;
   var selection;
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[0].checked) {
-      selection = affirmations[getRandomIndex(affirmations)];
-      messageDisplayBox.innerHTML = selection;
-      // affirmationsUsed.push(selection);
-      // affirmations.splice(selection, 1)
-      console.log(selection);
-      // console.log(affirmationsUsed);
-      // console.log(affirmationsUsed.length);
-    } else if (radios[1].checked) {
-      selection = mantras[getRandomIndex(mantras)];
-      messageDisplayBox.innerHTML = selection;
-      // mantrasUsed.push(selection);
-      // mantras.splice(i, 1);
-    }
+  if (radios[0].checked) {
+    shuffle(affirmations);
+    for (var i = 0; i < affirmations.length; i++)
+      selection = affirmations[i];
+    messageDisplayBox.innerHTML = selection;
+    affirmationsUsed.push(selection);
+    var index = affirmations.indexOf(selection);
+    affirmations.splice(index, 1);
+    return selection;
+  } else if (radios[1].checked) {
+    shuffle(mantras);
+    for (var i = 0; i < mantras.length; i++)
+      selection = mantras[i];
+    messageDisplayBox.innerHTML = selection;
+    mantrasUsed.push(selection);
+    var index = mantras.indexOf(selection);
+    mantras.splice(index, 1);
+    return selection;
   }
 }
-
-// function displayMessage() {
-//   var div = document.querySelector(".radio-buttons")
-//   var radios = div.querySelectorAll("input");
-//   var selection;
-//   for (var i = 0; i < radios.length; i++) {
-//     if (radios[0].checked) {
-//       selection = affirmations[getRandomIndex(affirmations)];
-//       messageDisplayBox.innerHTML = selection;
-//     } else if (radios[1].checked) {
-//       selection = mantras[getRandomIndex(mantras)];
-//       messageDisplayBox.innerHTML = selection;
-//     }
-//   }
-// }
 
 /*
 Use JavaScript to ensure that the user never sees a
