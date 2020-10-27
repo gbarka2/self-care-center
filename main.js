@@ -80,10 +80,3 @@ function checkForEmptyArray(array, arrayUsed) {
     };
   };
 };
-/*
-Use JavaScript to ensure that the user never sees a
-repeated message until they’ve seen them all.
-
-After they’ve seen them all they should be notified
-that they will now start seeing repeat messages.
-*/
