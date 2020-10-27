@@ -1,5 +1,6 @@
 var receiveMessageButton = document.querySelector(".receive-message");
 var messageDisplayBox = document.querySelector(".display");
+var deleteMessageButton = document.querySelector(".delete-message");
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -37,6 +38,7 @@ var affirmationsUsed = [];
 var mantrasUsed = [];
 
 receiveMessageButton.addEventListener('click', displayMessage);
+deleteMessageButton.addEventListener('click', removeMessage)
 
 function shuffle(array) {
   for (var i = 0; i < array.length; i++) {
@@ -80,3 +82,26 @@ function checkForEmptyArray(array, arrayUsed) {
     };
   };
 };
+
+function removeMessage(array) {
+  if (array = affirmations) {
+    removeAffirmation();
+  } else if (array = mantras) {
+    removeMantra();
+  }
+  displayMessage();
+}
+
+function removeAffirmation() {
+  var selection = messageDisplayBox.innerHTML;
+  var index = affirmations.indexOf(selection);
+  affirmations.splice(selection, 1);
+  displayMessage();
+}
+
+function removeMantra() {
+  var selection = messageDisplayBox.innerHTML;
+  var index = mantras.indexOf(selection);
+  mantras.splice(selection, 1);
+  displayMessage();
+}
